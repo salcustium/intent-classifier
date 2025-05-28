@@ -2,6 +2,8 @@
 
 This contains everything you need to run your app locally.
 
+https://v2-intent-ai-agent-257974748367.us-west1.run.app/
+
 ## Run Locally
 
 **Prerequisites:**  Node.js
