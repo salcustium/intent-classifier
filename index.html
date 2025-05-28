@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Service AI Agent</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-primary': '#007bff',
+            'brand-secondary': '#6c757d',
+            'agent-bg': '#e9ecef',
+            'user-bg': '#007bff',
+            'system-bg': '#f8f9fa',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- !!! IMPORTANT: Instructions for API Key !!! -->
+  <!-- 
+    To deploy this application, you need to provide your API Key.
+    Replace "YOUR_ACTUAL_API_KEY" below with your real API key.
+    WARNING: This method makes your API key visible in the client-side code.
+    This is simpler for quick deployment but is NOT SECURE for public applications.
+    For secure production deployment, use serverless functions to handle the API key.
+  -->
+  <script>
+    window.process = {
+      env: {
+        // Replace "YOUR_ACTUAL_API_KEY" with your real API key
+        API_KEY: "YOUR_ACTUAL_API_KEY" 
+      }
+    };
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "uuid": "https://esm.sh/uuid@^11.1.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.1.0"
+  }
+}
+</script>
+<!-- 
+  NOTE FOR DEPLOYMENT:
+  The script src below has been changed from "/index.tsx" to "/index.js".
+  Browsers cannot directly execute .tsx (TypeScript JSX) files.
+  You MUST transpile your .tsx files (index.tsx, App.tsx, components/*.tsx) 
+  into .js files and ensure all internal imports also use .js extensions.
+  Then, deploy these .js files along with this index.html to Netlify.
+  A common way to do this is using the TypeScript compiler (tsc).
+-->
+</head>
+<body class="bg-gradient-to-br from-slate-900 to-slate-800 text-slate-100 font-sans">
+  <div id="root"></div>
+  <script type="module" src="/index.js"></script>
+</body>
+</html><link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>

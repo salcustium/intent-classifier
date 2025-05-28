@@ -1,0 +1,6 @@
+{
+  "name": "v2 intent AI Agent",
+  "description": "An AI-powered agent to classify customer inquiries, provide information from a knowledge base, log feature requests, gather sales lead details, and determine if escalation to a human is needed.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
